@@ -19,8 +19,8 @@ script:
   - docker tag env-test digibert/env-test:latest
 
 after_success:
-  
   - docker push digibert/env-test
 
 deploy:
   - docker run digibert/env-test
+  on: main
